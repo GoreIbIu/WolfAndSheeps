@@ -1,25 +1,24 @@
 package vsu.vinokurov.main.Field;
 
 import vsu.vinokurov.main.Dots.Coord;
-import vsu.vinokurov.main.Player.Token;
 
 public class Cell {
-    boolean thereIsToken=false;
+    private String label = "none";
     Coord position;
-    Token token;
+
     public Cell(Coord position) {
-        this.thereIsToken = false;
         this.position = position;
     }
-    public boolean TokenIsThere(){
-        if(thereIsToken){return true;}
-        return false;
+
+    public Coord getPosition() {
+        return position;
     }
-    public void ThereIsToken(){
-        thereIsToken = true;
+
+    public String getLabel() {
+        return label;
     }
-    public Coord getPosition(){return position;}
-    public Token getToken(){
-        return token;
+
+    public void setLabel(String label) {
+        this.label = label;
     }
 }
